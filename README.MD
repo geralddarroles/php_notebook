@@ -1,0 +1,1 @@
+This is my personal guide to php code. 

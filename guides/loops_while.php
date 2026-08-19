@@ -2,7 +2,6 @@
 
 while ($attempts < $maxAttempts) {
     // remove break to start working on this
-    break;
     echo "Guess the password:";
     $guess = trim(fgets(STDIN));
     $attempts++;

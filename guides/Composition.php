@@ -1,17 +1,19 @@
-<?php
+    <?php
 
-require_once "PaymentProcessor";
+    require_once "PaymentProcessor.php";
 
-// Composition, creating a class within a class  
+    // Composition - initializing a class within another class, this is a better approach than inheritance because it allows for more flexibility and reusability of code.
 
-class OrderProcessor
-{
-    public function __construct(private PaymentProcessor $PaymentProcessor) {}
 
-    public function process()
+    class OrderProcessor
     {
-        $this->$PaymentProcessor->refund();
-    }
-}
+        public function __construct(private PaymentProcessor $paymentProcessor) {}
 
-$paymentProcessor = new PaymentProcessor();
+        public function process()
+        {
+            $this->paymentProcessor->refund(1);
+        }
+    }
+
+    $orderProcessor = new OrderProcessor(new RAMPProcessor());
+    $orderProcessor->process();

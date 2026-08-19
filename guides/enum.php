@@ -1,5 +1,5 @@
 <?php
-
+// Enums similar to C++  syntax  when using 
 enum DaysOfWeek
 {
     case FRIDAY;

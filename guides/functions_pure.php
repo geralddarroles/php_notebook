@@ -1,21 +1,13 @@
 <?php
 
-$total = 0;
+// Doesn't mutate anything, doesn't have any side effects, and always returns the same output for the same input. 
 
-function addToTal($value)
+function addToTotal(int $total, int $value): int
 {
-    global $total;
-    $total += $value;
-    return $total;
+    return $total + $value;
 }
 
-// this is not a pure funciton because it has side effects and does not output based on the same input 
-
-function addToTal2($value)
-{
-    $total = $value + $value;
-    return $total;
-} 
-
-
-
+// Usage — caller manages the state, not the function:
+$total = 0;
+$total = addToTotal($total, 5);  // 5
+$total = addToTotal($total, 3);  // 8

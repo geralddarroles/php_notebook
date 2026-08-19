@@ -1,6 +1,7 @@
 <?php
 
-// two types of array, simple array, and assocative array
+// two types of array, simple array, and assocative array, associative arrays are like js objects or hash maps 
+// Arrays don't have their own methods, they are closer to C than javascript, but there are many built-in functions for arrays in PHP. 
 
 // Index Array (Simple Array)
 $colors = array("Red", "Green", "Blue");
@@ -10,7 +11,7 @@ echo $colors[0]; // Output: Red
 $person = array("name" => "John", "age" => 30, "city" => "New York");
 echo $person["name"]; // Output: John
 
-// Combined - Array of Associative Arrays
+// Combined - Array of Associative Arrays 
 $employees = array(
     array("name" => "John", "age" => 30, "department" => "IT"),
     array("name" => "Jane", "age" => 28, "department" => "HR"),
@@ -177,4 +178,3 @@ $assoc1 = ["a" => 1, "b" => 2];
 $assoc2 = ["c" => 3, "d" => 4];
 $unpacked_assoc = [...$assoc1, ...$assoc2];
 echo "Spread operator with keys: " . implode(", ", $unpacked_assoc) . "\n";
-

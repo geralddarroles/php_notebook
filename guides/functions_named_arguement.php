@@ -1,5 +1,8 @@
 <?php
 
+// Similar to python / typescript function implementations 
+// Can be rearranged in any order, and the function name must be unique. 
+
 function greet(string $name, string $greeting = "Hello", bool $shout = false): string
 {
         $message = "$greeting, $name";

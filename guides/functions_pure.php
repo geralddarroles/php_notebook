@@ -15,4 +15,7 @@ function addToTal2($value)
 {
     $total = $value + $value;
     return $total;
-}
+} 
+
+
+
